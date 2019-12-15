@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Snowflakes demo</title>
-  <link rel="stylesheet" type="text/css" href="sf-demo.css" />
-  <link rel="stylesheet" type="text/css" href="../src/snowflakes.css" />
-</head>
-
-<body>
-  <h1>Snowflakes demo</h1>
-  <button id="toggleFlakes">Toggle animation</button>
-  <template id="flakeSvg">
-    <svg class="snowflake" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-      x="0px" y="0px" viewBox="0 0 219.781 219.781" style="enable-background:new 0 0 219.781 219.781;"
-      xml:space="preserve">
-      <path
-        d="M202.314,154.591l-22.323-12.888l19.345-11.407c3.568-2.104,4.755-6.702,2.651-10.27c-2.104-3.567-6.701-4.754-10.27-2.651
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 219.781 219.781" style="enable-background:new 0 0 219.781 219.781;" xml:space="preserve">
+<path d="M202.314,154.591l-22.323-12.888l19.345-11.407c3.568-2.104,4.755-6.702,2.651-10.27c-2.104-3.567-6.701-4.754-10.27-2.651
 	l-26.648,15.713l-40.179-23.198l40.172-23.194l26.656,15.711c1.195,0.705,2.507,1.039,3.801,1.039c2.568,0,5.069-1.32,6.468-3.693
 	c2.103-3.568,0.915-8.166-2.653-10.27L179.986,78.08l22.328-12.891c3.587-2.071,4.816-6.658,2.745-10.245
 	c-2.071-3.588-6.658-4.817-10.245-2.745l-22.323,12.889l-0.203-22.461c-0.037-4.142-3.435-7.489-7.567-7.432
@@ -36,10 +20,5 @@
 	c4.142,0,7.5-3.358,7.5-7.5v-25.78l19.556,11.052c1.166,0.659,2.433,0.972,3.684,0.972c2.616,0,5.157-1.371,6.536-3.811
 	c2.038-3.606,0.767-8.182-2.839-10.22l-26.937-15.224V122.88l40.177,23.196l-0.286,30.941c-0.039,4.142,3.288,7.531,7.43,7.569
 	c0.024,0.001,0.047,0.001,0.071,0.001c4.109,0,7.46-3.313,7.498-7.431l0.208-22.465l22.326,12.89
-	c1.181,0.682,2.471,1.006,3.743,1.006c2.592,0,5.113-1.346,6.502-3.751C207.131,161.249,205.902,156.662,202.314,154.591z" />
-    </svg>
-  </template>
-  <script src="../src/index.js"></script>
-</body>
-
-</html>
+	c1.181,0.682,2.471,1.006,3.743,1.006c2.592,0,5.113-1.346,6.502-3.751C207.131,161.249,205.902,156.662,202.314,154.591z"/>
+</svg>
