@@ -1,6 +1,9 @@
 .snowflake {
   fill: white;
   position: fixed;
+  opacity: .8;
+  pointer-events: none;
+  top: -7vh;
 }
 .fallAnimation {
   animation-name: flakefall;
