@@ -6,17 +6,3 @@
   top: -7vh;
   will-change: transform;
 }
-/* .fallAnimation {
-  animation-name: flakefall;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes flakefall {
-  from {
-    top: -7vh
-  }
-  to {
-    top: 100vh
-  }
-} */

@@ -23,7 +23,6 @@ snowflakes.updateCount = (newCount) => {
     flake.element.remove()
   })
   flakes = new Array(snowflakeCount).fill(null).map(createFlake)
-  snowflakes.start()
 }
 
 snowflakes.updateSpeed = (newSpeed) => {
