@@ -3,5 +3,7 @@ import snowflakes from './snowflakes'
 snowflakes.start()
 // document.getElementById('toggleFlakes').addEventListener('click', () => snowflakes.toggle())
 document.addEventListener('keypress', (e) => {
-  if (e.keyCode === 112) snowflakes.toggle()
+  if (e.key === 'p') snowflakes.toggle()
+  if (e.key === 'c') snowflakes.updateCount(window.prompt('Update count'))
+  if (e.key === 's') snowflakes.updateSpeed(window.prompt('Update speed (0-10, 1 is default)'))
 })

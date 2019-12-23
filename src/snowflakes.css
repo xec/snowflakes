@@ -4,8 +4,9 @@
   opacity: .8;
   pointer-events: none;
   top: -7vh;
+  will-change: transform;
 }
-.fallAnimation {
+/* .fallAnimation {
   animation-name: flakefall;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -18,4 +19,4 @@
   to {
     top: 100vh
   }
-}
+} */

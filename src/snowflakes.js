@@ -8,11 +8,30 @@ const flakeStrings = [
   flake1,
   flake2
 ]
-const snowflakeCount = 90
-const flakes = new Array(snowflakeCount).fill(null).map(createFlake)
+let snowflakeCount = 90
+let flakes = new Array(snowflakeCount).fill(null).map(createFlake)
 let enableAnimation = true
 let windFactor = Math.ceil(Math.random() * 2) - 1
+let speed = 1
 const windCap = 2
+
+snowflakes.updateCount = (newCount) => {
+  newCount = parseInt(newCount)
+  if (!newCount || newCount < 0) return
+  snowflakeCount = newCount
+  flakes.forEach(flake => {
+    flake.element.remove()
+  })
+  flakes = new Array(snowflakeCount).fill(null).map(createFlake)
+  snowflakes.start()
+}
+
+snowflakes.updateSpeed = (newSpeed) => {
+  if (!newSpeed) return
+  newSpeed = parseFloat(newSpeed)
+  if (newSpeed < 0 || newSpeed > 10) return
+  speed = newSpeed
+}
 
 function createFlake () {
   const flakeString = flakeStrings[Math.floor(Math.random() * flakeStrings.length)]
@@ -21,8 +40,8 @@ function createFlake () {
   const flakeSvg = wrapper.querySelector('svg')
   const size = Math.random() // 0 to 1
   // between -5 and 105 to allow flakes slightly outside viewport
-  const positionX = Math.random() * 100
-  const positionY = Math.random() * 100
+  const positionX = Math.random() * 116
+  const positionY = Math.random() * 116
 
   document.body.appendChild(wrapper)
 
@@ -61,12 +80,12 @@ function step () {
   }
   flakes.forEach(flake => {
     // apply wind to each flake based on its velocity
-    flake.x += windFactor * flake.velocity
+    flake.x += windFactor * flake.velocity * speed
     if (flake.x > 107) flake.x = -6 // when clipped right side, move to left side
     if (flake.x < -7) flake.x = 106 // and vice versa
 
     // fall down
-    flake.y += flake.velocity
+    flake.y += flake.velocity * speed
     if (flake.y > 107) flake.y = 0
 
     // rotate
