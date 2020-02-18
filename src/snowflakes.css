@@ -4,5 +4,6 @@
   opacity: .8;
   pointer-events: none;
   top: -7vh;
+  z-index: 10000;
   will-change: transform;
 }

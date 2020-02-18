@@ -1,4 +1,4 @@
-import snowflakes from './snowflakes'
+import snowflakes from '../src/snowflakes'
 
 snowflakes.start()
 // document.getElementById('toggleFlakes').addEventListener('click', () => snowflakes.toggle())
