@@ -1,32 +1,28 @@
 // parcel doesn't import .svg files as strings
-// import flake1 from './snowflake.svg.html'
-// import flake2 from './snowflake2.svg.html'
+
 import flakeStrings from "./flake-svgs";
 import "./snowflakes.css";
 
 const snowflakes = {}; // default export object
-// const flakeStrings = [
-//   flake1,
-//   flake2
-// ]
+
 let snowflakeCount = 90;
 let flakes = [];
 let enableAnimation = false;
 let windFactor = Math.ceil(Math.random() * 2) - 1;
 let speed = 1;
+let timer;
 const windCap = 2;
 
 snowflakes.updateCount = newCount => {
   newCount = parseInt(newCount);
   if (!newCount || newCount < 0) return;
-  enableAnimation = false;
+  snowflakes.stop();
   snowflakeCount = newCount;
-  flakes.forEach(flake => flake.element.remove());
   flakes = new Array(snowflakeCount).fill(null).map(createFlake);
-  setTimeout(() => {
-    enableAnimation = true;
-    window.requestAnimationFrame(step);
-  });
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+      snowflakes.start();
+  }, 10)
 };
 
 snowflakes.updateSpeed = newSpeed => {
@@ -46,8 +42,6 @@ function createFlake() {
   // between -5 and 105 to allow flakes slightly outside viewport
   const positionX = Math.random() * 116;
   const positionY = Math.random() * 116;
-
-  // document.body.appendChild(wrapper);
 
   flakeSvg.classList.add("snowflake");
   flakeSvg.style.height = size * 30 + 10 + "px";
