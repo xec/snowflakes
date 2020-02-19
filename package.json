@@ -5,7 +5,7 @@
   "main": "package/snowflakes.js",
   "scripts": {
     "dev": "parcel public/index.html --open",
-    "build:demo": "parcel build public/index.html",
+    "build:demo": "parcel build public/index.html --public-url .",
     "build": "parcel build src/snowflakes.js --out-dir package"
   },
   "prebuild": "rm -rf package",
