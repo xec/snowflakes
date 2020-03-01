@@ -1,6 +1,6 @@
 {
   "name": "@xec/snowflakes",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Falling svg snowflakes overlay",
   "main": "src/snowflakes.js",
   "scripts": {
@@ -13,7 +13,10 @@
     "type": "git",
     "url": "https://github.com/xec/snowflakes.git"
   },
-  "keywords": ["snowflakes", "christmas"],
+  "keywords": [
+    "snowflakes",
+    "christmas"
+  ],
   "author": "Eric Morton",
   "license": "GNU GPLv3",
   "bugs": {
