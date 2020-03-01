@@ -1,6 +1,6 @@
 {
   "name": "@xec/snowflakes",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Falling svg snowflakes overlay",
   "main": "src/snowflakes.js",
   "scripts": {
