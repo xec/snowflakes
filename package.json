@@ -2,16 +2,24 @@
   "name": "@xec/snowflakes",
   "version": "0.0.4",
   "description": "Falling svg snowflakes overlay",
-  "main": "package/snowflakes.js",
+  "main": "src/snowflakes.js",
   "scripts": {
     "dev": "parcel public/index.html --open",
     "build:demo": "parcel build public/index.html --public-url .",
     "build": "parcel build src/snowflakes.js --out-dir package"
   },
   "prebuild": "rm -rf package",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xec/snowflakes.git"
+  },
+  "keywords": ["snowflakes", "christmas"],
+  "author": "Eric Morton",
+  "license": "GNU GPLv3",
+  "bugs": {
+    "url": "https://github.com/xec/snowflakes/issues"
+  },
+  "homepage": "https://github.com/xec/snowflakes",
   "devDependencies": {
     "parcel": "^1.12.4"
   }
