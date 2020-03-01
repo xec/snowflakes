@@ -18,6 +18,8 @@ https://xec.github.io/snowflakes
 
 ### Install
 
+Requires [Node.js](https://nodejs.org/) installed
+
 ```bash
 npm i -D @xec/snowflakes
 ```
