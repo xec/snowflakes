@@ -4,24 +4,41 @@ Transparent svg snowflakes on your website.
 
 ## Features
 
-* Spinning
 * Falling
-* Random wind
+* Spinning
+* Blowing wind
 * Random sizes
 * Parallax effect
 
+## Demo
+
+https://xec.github.io/snowflakes
+
 ## Usage
 
-Install
+### Install
 
 ```bash
 npm i -D @xec/snowflakes
 ```
 
-Run from your js
+### Run
 
 ```js
 import snowflakes from '@xec/snowflakes'
 
+// generate flakes and start animation
 snowflakes.start()
+
+// stop animation
+snowflakes.stop()
+
+// toggle animation on/off
+snowflakes.toggle()
+
+// set flake count, default is 90
+snowflakes.updateCount(int)
+
+// set speed, default is 1, recommended between 0.1 and 10
+snowflakes.updateSpeed(float)
 ```
