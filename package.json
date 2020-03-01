@@ -2,7 +2,7 @@
   "name": "@xec/snowflakes",
   "version": "0.0.6",
   "description": "Falling svg snowflakes overlay",
-  "main": "src/snowflakes.js",
+  "main": "package/snowflakes.js",
   "scripts": {
     "dev": "parcel public/index.html --open",
     "build:demo": "parcel build public/index.html --public-url .",
