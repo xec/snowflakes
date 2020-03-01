@@ -1,5 +1,4 @@
 // parcel doesn't import .svg files as strings
-
 import flakeStrings from "./flake-svgs";
 import "./snowflakes.css";
 
@@ -13,25 +12,6 @@ let speed = 1;
 let timer;
 const windCap = 2;
 
-snowflakes.updateCount = newCount => {
-  newCount = parseInt(newCount);
-  if (!newCount || newCount < 0) return;
-  snowflakes.stop();
-  snowflakeCount = newCount;
-  flakes = new Array(snowflakeCount).fill(null).map(createFlake);
-  clearTimeout(timer);
-  timer = setTimeout(() => {
-      snowflakes.start();
-  }, 10)
-};
-
-snowflakes.updateSpeed = newSpeed => {
-  if (!newSpeed && newSpeed !== 0) return;
-  newSpeed = parseFloat(newSpeed);
-  if (newSpeed < 0 || newSpeed > 10) return;
-  speed = newSpeed;
-};
-
 function createFlake() {
   const flakeString =
     flakeStrings[Math.floor(Math.random() * flakeStrings.length)];
@@ -39,9 +19,9 @@ function createFlake() {
   wrapper.innerHTML = flakeString;
   const flakeSvg = wrapper.querySelector("svg");
   const size = Math.random(); // 0 to 1
-  // between -5 and 105 to allow flakes slightly outside viewport
-  const positionX = Math.random() * 116;
-  const positionY = Math.random() * 116;
+  // between -7 and 107 to allow flakes slightly outside viewport
+  const positionX = Math.random() * 114 - 7;
+  const positionY = Math.random() * 114 - 7;
 
   flakeSvg.classList.add("snowflake");
   flakeSvg.style.height = size * 30 + 10 + "px";
@@ -79,6 +59,25 @@ snowflakes.toggle = () => {
   } else {
     snowflakes.stop();
   }
+};
+
+snowflakes.updateCount = newCount => {
+  newCount = parseInt(newCount);
+  if (!newCount || newCount < 0) return;
+  snowflakes.stop();
+  snowflakeCount = newCount;
+  flakes = new Array(snowflakeCount).fill(null).map(createFlake);
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    snowflakes.start();
+  }, 10);
+};
+
+snowflakes.updateSpeed = newSpeed => {
+  if (!newSpeed && newSpeed !== 0) return;
+  newSpeed = parseFloat(newSpeed);
+  if (newSpeed < 0 || newSpeed > 10) return;
+  speed = newSpeed;
 };
 
 function step() {
