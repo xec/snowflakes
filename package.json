@@ -9,7 +9,6 @@
     "build": "parcel build src/snowflakes.js --out-dir package"
   },
   "prebuild": "rimraf package",
-  "preversion": "npm run build",
   "repository": {
     "type": "git",
     "url": "https://github.com/xec/snowflakes.git"
@@ -20,7 +19,7 @@
     "christmas"
   ],
   "author": "Eric Morton",
-  "license": "GNU GPLv3",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/xec/snowflakes/issues"
   },
