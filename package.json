@@ -8,12 +8,14 @@
     "build:demo": "parcel build public/index.html --public-url .",
     "build": "parcel build src/snowflakes.js --out-dir package"
   },
-  "prebuild": "rm -rf package",
+  "prebuild": "rimraf package",
+  "preversion": "npm run build",
   "repository": {
     "type": "git",
     "url": "https://github.com/xec/snowflakes.git"
   },
   "keywords": [
+    "xec",
     "snowflakes",
     "christmas"
   ],
@@ -24,6 +26,7 @@
   },
   "homepage": "https://github.com/xec/snowflakes",
   "devDependencies": {
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "rimraf": "^3.0.2"
   }
 }
