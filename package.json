@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "parcel public/index.html --open",
     "build:demo": "parcel build public/index.html --public-url .",
-    "build": "parcel build src/snowflakes.js --out-dir package"
+    "build": "parcel build src/snowflakes.js"
   },
   "prebuild": "rimraf package",
   "repository": {
@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/xec/snowflakes",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "parcel": "^2.0.1"
   }
 }
